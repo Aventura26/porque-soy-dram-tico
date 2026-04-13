@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+
+<!--you’re not supposed to be here..
+..but I was hoping you would be-->
+
+<html lang="en">
+<!-- hola, quintero.. -->
+<!-- hunt the script → embrace the taunt → unlock → reward -->
+<!-- yeah.. you could be a snoop and easily peek at images.. or you could do it properly 😈 -->
+<!-- so, nothing to see here, keep scripting.. i mean.. searching.. leave no stone unturned -->
+<!-- oh, before you go, be gentle with her.. this code is held together by hope and duct tape -->
+
+<head>
+<meta charset="UTF-8">
+<title>Aventuras</title>
+
+<style>
+#noPage img:first-child {
+    width: 700px;
+    max-width: 90%;
+}
+
+#noPage .image-row img {
+    width: 400px;
+    height: 400px;
+    max-width: none;
+    object-fit: contain;
+}
+
+#yesPage .image-row img {
+    width: 350px;
+    height: auto;
+    max-width: none;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: #ffeef2;
+    overflow-x: hidden;
+}
+
+.glitch {
+  animation: glitch 0.3s infinite;
+}
+
+@keyframes glitch {
+  0% { transform: translate(0, 0); opacity: 1; }
+  20% { transform: translate(-2px, 2px); opacity: 0.9; }
+  40% { transform: translate(2px, -2px); opacity: 1; }
+  60% { transform: translate(-1px, 1px); opacity: 0.85; }
+  80% { transform: translate(1px, -1px); opacity: 1; }
+  100% { transform: translate(0, 0); opacity: 1; }
+}
+
+/* Pages */
+.page {
+    display: none;
+    padding: 40px;
+}
+
+.active {
+    display: block;
+}
+
+/* Buttons */
+button {
+    padding: 15px 25px;
+    margin: 15px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#buttonContainer {
+    position: relative;
+    display: inline-block;
+}
+
+#yesBtn { background: #a8e6cf; }
+#noBtn { background: #ff8b94; }
+#chaosBtn {
+    background: #ffd3b6;
+    position: relative;
+}
+
+/* Flame animation */
+.flame {
+    animation: flicker 1s infinite alternate;
+}
+
+@keyframes flicker {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.2) rotate(2deg); }
+}
+
+/* NO PAGE */
+.noPage {
+    background: linear-gradient(#2c2c2c, #000);
+    color: white;
+    height: 100vh;
+}
+
+.pinkPage {
+    background: linear-gradient(#ffeef2, #ffd6e0);
+    color: black;
+    min-height: 100vh;
+}
+
+.rain {
+    position: fixed;
+    width: 2px;
+    height: 100px;
+    background: rgba(255,255,255,0.2);
+    animation: rainFall linear infinite;
+}
+
+@keyframes rainFall {
+    to {
+        transform: translateY(100vh);
+    }
+}
+
+.shake {
+    display: inline-block;
+    animation: shake 0.5s infinite;
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px); }
+    50% { transform: translate(-1px, -2px); }
+    100% { transform: translate(1px, -1px); }
+}
+
+/* CHAOS IMAGE */
+img {
+    max-width: 300px;
+    border-radius: 20px;
+}
+
+.image-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- MAIN PAGE -->
+
+<div id="mainPage" class="page active pinkPage">
+    <h1>Aventuras de: el danés y el colombiano</h1>
+<h1>Elige una aventura.. Rómpeme el corazón.. O elige el caos..</h1>
+    <p>JHQ, find the hidden easter eggs and unlock an exclusive activity<span class="flame">🔥</span></p>
+
+<p><i>(click on my nose to get the party started, then begin your hunt…)</i></p>
+<!-- curious already, quintero? good..
+but curiosity alone won’t get you there..
+chaos isn’t given.. it’s taken 😈
+-->
+<img src="yourphoto.jpg">
+
+<br>
+
+<div id="buttonContainer">
+    <button id="yesBtn">Yes 😊</button>
+    <button id="noBtn">No 😒</button>
+    <button id="chaosBtn" disabled>Chaos 😈</button>
+
+</div>
+</div>
+
+<!-- YES PAGE -->
+
+<!-- me encanta cuando dices sí, papí 😊 -->
+<div id="yesPage" class="page pinkPage">
+    <h2>¡Felicidades, buena elección!</h2>
+<p>You have selected to have another great adventure with your bebesita</p>
+<p>So.. what will it be papí?</p>
+
+    <div class="image-row">
+        <img src="yesleft.jpg" />
+        <img src="yesright.jpg" />
+    </div>
+</div>
+
+<!-- NO PAGE -->
+
+<!-- ¿No? ¿Quieres castigarme, papí? 😈 -->
+<div id="noPage" class="page noPage">
+
+    <img src="no1.jpg" class="shake" />
+
+    <div class="image-row">
+        <img src="no2.jpg" class="chaos-image" />
+        <img src="no3.jpg" class="chaos-image" />
+    </div>
+
+</div>
+
+<!-- CHAOS PAGE -->
+
+<!-- que rico papí.. 😈 -->
+<div id="chaosPage" class="page noPage">
+    <h2>ohhh, you dirty, dirty software engineer.. you’ve found the easter egg..</h2>
+<!-- yes, I know you can hover over images and take the easy way out..we've discussed this already
+BUT I KNOW YOU, quintero 
+you don’t want shortcuts, not really..
+you want the satisfaction of unlocking the eggs properly
+so behave.. and earn it 😈 -->
+<p>Ahora que lo has encontrado, ¿lo reclamarás o huirás a esconderte?</p>
+
+<img src="pancake.jpg" alt="pancake" style="display:block; margin: 0 auto;" />
+
+<img src="notpancake.jpg" alt="chaos visual" style="display:block; margin-top: 20px; margin-left:auto; margin-right:auto;" />
+
+</div>
+
+<script>
+let started = false;
+
+// enter the chaos page to retrieve the hidden code
+// send the code to me on whatsapp to redeem the prize
+// if you don’t send me the code, I will assume you didn't find the easter egg.. and WOOOOOOOF, talk about poor coding skills.. tighten up papi..  
+
+// AUDIO
+let currentAudio;
+
+function playSound(src, loop = true) {
+    // ALWAYS stop anything currently playing
+    if (currentAudio) {
+        currentAudio.pause();
+        currentAudio.src = "";
+        currentAudio = null;
+    }
+
+    // Create new audio cleanly
+    const audio = new Audio(src);
+    audio.loop = loop;
+    audio.volume = 0.6;
+
+    currentAudio = audio;
+
+    audio.play().catch(() => {});
+}
+
+document.addEventListener("click", (e) => {
+    if (!started) {
+        started = true;
+
+        // ONLY play main if NOT clicking the No button
+        if (e.target.id !== "noBtn" && e.target.id !== "yesBtn" && e.target.id !== "chaosBtn") {
+            playSound("main.mp3");
+        }
+    }
+});
+
+// BUTTONS
+const yesBtn = document.getElementById("yesBtn");
+const noBtn = document.getElementById("noBtn");
+const chaosBtn = document.getElementById("chaosBtn");
+
+function showPage(pageId) {
+
+    if (currentAudio) {
+        currentAudio.pause();
+        currentAudio.currentTime = 0;
+        currentAudio = null;
+    }
+
+    document.querySelectorAll(".page").forEach(p => p.classList.remove("active"));
+    document.getElementById(pageId).classList.add("active");
+}
+
+// YES
+yesBtn.onclick = () => {
+    showPage("yesPage");
+    playSound("yes.mp3");
+};
+
+noBtn.onclick = () => {
+    showPage("noPage");
+
+    // HARD RESET audio first
+    if (currentAudio) {
+        currentAudio.pause();
+        currentAudio.currentTime = 0;
+        currentAudio.src = "";
+        currentAudio = null;
+    }
+
+    // then play correct sound
+    playSound("no.mp3");
+};
+
+// CHAOS
+chaosBtn.onclick = () => {
+    showPage("chaosPage");
+
+    // stop any currently playing audio first
+    if (currentAudio) {
+        currentAudio.pause();
+        currentAudio.currentTime = 0;
+    }
+
+    playSound("chaos.mp3");
+};
+
+// CHAOS MOVE
+chaosBtn.addEventListener("mouseover", () => {
+    const rect = chaosBtn.getBoundingClientRect();
+
+    const maxX = window.innerWidth - rect.width - 20;
+    const maxY = window.innerHeight - rect.height - 20;
+
+    const x = Math.random() * maxX;
+    const y = Math.random() * maxY;
+
+    chaosBtn.style.position = "fixed";
+    chaosBtn.style.left = x + "px";
+    chaosBtn.style.top = y + "px";
+});
+
+// CHAOS CLICK (DEV ONLY)
+chaosBtn.addEventListener("click", () => {
+    showPage("chaosPage");
+    playSound("chaos.mp3");
+});
+
+// debug output
+console.log("Initializing cyber-neural network...");
+console.log("Bypassing firewall... ");
+console.log("WARNING: Unauthorized access to the cookie jar detected.");
+console.log("ADVERTENCIA: Solo bromeaba... perdón por el estrés quintero..");
+
+</script>
+
+</body>
+</html>
